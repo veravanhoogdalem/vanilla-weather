@@ -35,12 +35,11 @@ function formatDate(date) {
         let day = days[date.getDay()];
 
         if (minutes < 10) {
-            minutes = `0${minutes}`
+            minutes = `0${minutes}`;
         }
     
     return `${day} ${hours}:${minutes}`;
 }
-
 
 function searchCity(city) {
 let apiKey = "84b4398430f91bcff96523d5at640feo";
@@ -53,9 +52,10 @@ function handleSearchSubmit(event) {
 event.preventDefault();
 let searchInput = document.querySelector("#search-form-input");
 
-
 searchCity(searchInput.value);
 }
 
 let searchFormElement = document.querySelector("#search-form");
-searchFormElement.addEventListener("submit", handleSearchSubmit)
+searchFormElement.addEventListener("submit", handleSearchSubmit);
+
+searchCity("Amsterdam");
